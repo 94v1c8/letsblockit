@@ -9,7 +9,7 @@ params:
     type: checkbox
     default: false
   - name: remove-text-after-buttons-below-video
-    description: Hide the text label of the dislike/share/download/report/save buttons
+    description: Hide the text label of the like/dislike/share/thanks/download/clip/save buttons
     type: checkbox
     default: false
   - name: remove-copyright-notice
@@ -44,8 +44,7 @@ template: |
   www.youtube.com##.super-title
   {{/if}}
   {{#if remove-text-after-buttons-below-video}}
-  www.youtube.com###actions.ytd-watch-metadata ytd-button-renderer .yt-spec-button-shape-next .yt-spec-button-shape-next--button-text-content
-  www.youtube.com###actions.ytd-watch-metadata ytd-button-renderer .yt-spec-button-shape-next__icon:style(margin-right: -6px !important; margin-left: -6px !important;)
+  www.youtube.com###actions.ytd-watch-metadata ytd-menu-renderer tp-yt-paper-tooltip
   {{/if}}
   {{#if remove-copyright-notice}}
   www.youtube.com###description .ytd-watch-metadata #items:has(.ytd-video-description-music-section-renderer)
